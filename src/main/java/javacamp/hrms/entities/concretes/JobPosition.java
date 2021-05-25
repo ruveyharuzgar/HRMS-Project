@@ -13,10 +13,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name="job_positions")
-@NoArgsConstructor
+@Table(name="job_titles")
 @AllArgsConstructor
-
+@NoArgsConstructor
 public class JobPosition {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
