@@ -12,15 +12,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity
-@Table(name="job_titles")
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobPosition {
+@Entity
+@Table(name = "job_titles")
+public class JobTitle {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name = "id")
 	private int id;
-	@Column(name="title")
+	@Column(name = "title")
 	private String title;
 }
