@@ -25,6 +25,5 @@ public class EmployeesController {
 	@GetMapping("/getAll")
 	public DataResult<List<Employee>> getAll(){
 		return this.employeeService.getAll();
-		//employees null gelmeli kontrol et 
 	}
 }

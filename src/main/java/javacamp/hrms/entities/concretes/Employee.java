@@ -18,7 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "candidates")
+@Table(name = "employees")
 @PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
 @EqualsAndHashCode(callSuper = false)
 public class Employee extends User{
