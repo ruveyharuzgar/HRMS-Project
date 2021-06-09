@@ -1,38 +1,37 @@
 package javacamp.hrms.entities.concretes;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javacamp.hrms.core.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
 @Entity
 @Table(name = "candidates")
-@PrimaryKeyJoinColumn(name = "id", referencedColumnName = "id")
+@AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
+@PrimaryKeyJoinColumn(name = "user_id")
+@JsonIgnoreProperties(value = { "deleted", "active" })
 public class Candidate extends User {
+
 	@Column(name = "first_name")
 	private String firstName;
 
 	@Column(name = "last_name")
 	private String lastName;
 
-	@Column(name = "identification_number")
-	private String identificationNumber;
+	@Column(name = "identity_number")
+	private String identityNumber;
 
 	@Column(name = "birth_date")
-	private LocalDate birthDate;
+	private java.sql.Date birthDate;
 }

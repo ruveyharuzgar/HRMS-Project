@@ -2,12 +2,11 @@ package javacamp.hrms.business.concretes;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javacamp.hrms.business.abstracts.CandidateService;
 import javacamp.hrms.core.utilities.results.DataResult;
-import javacamp.hrms.core.utilities.results.SuccessDataResult;
+import javacamp.hrms.core.utilities.results.Result;
 import javacamp.hrms.dataAccess.abstracts.CandidateDao;
 import javacamp.hrms.entities.concretes.Candidate;
 
@@ -15,16 +14,17 @@ import javacamp.hrms.entities.concretes.Candidate;
 public class CandidateManager implements CandidateService {
 
 	private CandidateDao candidateDao;
-
-	@Autowired
-	public CandidateManager(CandidateDao candidateDao) {
-		super();
-		this.candidateDao = candidateDao;
+	
+	@Override
+	public DataResult<List<Candidate>> getAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
-	public DataResult<List<Candidate>> getAll() {
-		return new SuccessDataResult<List<Candidate>>(this.candidateDao.findAll(), "Candidates listed");
+	public Result save(Candidate candidate) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
