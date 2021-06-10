@@ -23,7 +23,7 @@ public class CandidateManager implements CandidateService {
 
 	@Override
 	public Result save(Candidate candidate) {
-		//deneme
+		//denemee
 		return null;
 	}
 
